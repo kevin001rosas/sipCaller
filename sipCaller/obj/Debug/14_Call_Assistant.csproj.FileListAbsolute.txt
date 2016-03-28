@@ -1,0 +1,24 @@
+C:\Users\Nataniel\Documents\Ozeki\Ozeki SDK\Examples\VoIP\01_Softphone\14_Call_Assistant\14_Call_Assistant\bin\Debug\14_Call_Assistant.exe.config
+C:\Users\Nataniel\Documents\Ozeki\Ozeki SDK\Examples\VoIP\01_Softphone\14_Call_Assistant\14_Call_Assistant\bin\Debug\UserInfoContainer.mdf
+C:\Users\Nataniel\Documents\Ozeki\Ozeki SDK\Examples\VoIP\01_Softphone\14_Call_Assistant\14_Call_Assistant\bin\Debug\UserInfoContainer_log.ldf
+C:\Users\Nataniel\Documents\Ozeki\Ozeki SDK\Examples\VoIP\01_Softphone\14_Call_Assistant\14_Call_Assistant\bin\Debug\14_Call_Assistant.exe
+C:\Users\Nataniel\Documents\Ozeki\Ozeki SDK\Examples\VoIP\01_Softphone\14_Call_Assistant\14_Call_Assistant\bin\Debug\14_Call_Assistant.pdb
+C:\Users\Nataniel\Documents\Ozeki\Ozeki SDK\Examples\VoIP\01_Softphone\14_Call_Assistant\14_Call_Assistant\bin\Debug\OzekiSDK.dll
+C:\Users\Nataniel\Documents\Ozeki\Ozeki SDK\Examples\VoIP\01_Softphone\14_Call_Assistant\14_Call_Assistant\obj\Debug\14_Call_Assistant.csprojResolveAssemblyReference.cache
+C:\Users\Nataniel\Documents\Ozeki\Ozeki SDK\Examples\VoIP\01_Softphone\14_Call_Assistant\14_Call_Assistant\obj\Debug\_14_Call_Assistant.FormCallAssistant.resources
+C:\Users\Nataniel\Documents\Ozeki\Ozeki SDK\Examples\VoIP\01_Softphone\14_Call_Assistant\14_Call_Assistant\obj\Debug\_14_Call_Assistant.Properties.Resources.resources
+C:\Users\Nataniel\Documents\Ozeki\Ozeki SDK\Examples\VoIP\01_Softphone\14_Call_Assistant\14_Call_Assistant\obj\Debug\14_Call_Assistant.csproj.GenerateResource.Cache
+C:\Users\Nataniel\Documents\Ozeki\Ozeki SDK\Examples\VoIP\01_Softphone\14_Call_Assistant\14_Call_Assistant\obj\Debug\14_Call_Assistant.exe
+C:\Users\Nataniel\Documents\Ozeki\Ozeki SDK\Examples\VoIP\01_Softphone\14_Call_Assistant\14_Call_Assistant\obj\Debug\14_Call_Assistant.pdb
+C:\Users\Nataniel\Desktop\sipCalls\14_Call_Assistant\14_Call_Assistant\bin\Debug\14_Call_Assistant.exe.config
+C:\Users\Nataniel\Desktop\sipCalls\14_Call_Assistant\14_Call_Assistant\obj\Debug\14_Call_Assistant.exe
+C:\Users\Nataniel\Desktop\sipCalls\14_Call_Assistant\14_Call_Assistant\obj\Debug\14_Call_Assistant.pdb
+C:\Users\Nataniel\Desktop\sipCalls\14_Call_Assistant\14_Call_Assistant\bin\Debug\UserInfoContainer.mdf
+C:\Users\Nataniel\Desktop\sipCalls\14_Call_Assistant\14_Call_Assistant\bin\Debug\UserInfoContainer_log.ldf
+C:\Users\Nataniel\Desktop\sipCalls\14_Call_Assistant\14_Call_Assistant\bin\Debug\14_Call_Assistant.exe
+C:\Users\Nataniel\Desktop\sipCalls\14_Call_Assistant\14_Call_Assistant\bin\Debug\14_Call_Assistant.pdb
+C:\Users\Nataniel\Desktop\sipCalls\14_Call_Assistant\14_Call_Assistant\obj\Debug\14_Call_Assistant.csprojResolveAssemblyReference.cache
+C:\Users\Nataniel\Desktop\sipCalls\14_Call_Assistant\14_Call_Assistant\obj\Debug\_14_Call_Assistant.FormCallAssistant.resources
+C:\Users\Nataniel\Desktop\sipCalls\14_Call_Assistant\14_Call_Assistant\obj\Debug\_14_Call_Assistant.Properties.Resources.resources
+C:\Users\Nataniel\Desktop\sipCalls\14_Call_Assistant\14_Call_Assistant\obj\Debug\14_Call_Assistant.csproj.GenerateResource.Cache
+C:\Users\Nataniel\Desktop\sipCalls\14_Call_Assistant\14_Call_Assistant\obj\Debug\_14_Call_Assistant.formDatosUsuario.resources
