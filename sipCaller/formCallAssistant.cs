@@ -2,12 +2,14 @@
 using System.Windows.Forms;
 using Ozeki.Media;
 using Ozeki.VoIP;
+using System.IO;
 
 namespace sipCaller
 {
     public partial class FormCallAssistant : Form
     {
         int secondsCounter = 0;
+        string extensionUltimaLlamada = ""; 
         string duration = ""; 
         ISoftPhone _softPhone;
         IPhoneLine _phoneLine;
@@ -25,6 +27,7 @@ namespace sipCaller
         UserInfo _otherParty;
 
         bool _incomingCall;
+        bool recibiendo = false; 
 
         public FormCallAssistant()
         {
@@ -98,6 +101,7 @@ namespace sipCaller
         {
 
             var userName = e.Item.DialInfo.CallerDisplay;
+            
             InvokeGUIThread(() => { tb_Display.Text = "Ringing from (" + userName + ")"; });
 
             _call = e.Item;
@@ -118,12 +122,22 @@ namespace sipCaller
                 _mediaSender.AttachToCall(_call);
                 _mediaReceiver.AttachToCall(_call);
                 
-                InvokeGUIThread(() => { tb_Display.Text = "In call with: " + ((IPhoneCall)sender).DialInfo.CallerDisplay; });
+                
                 
             }
             else if (e.State == CallState.InCall)
             {
                 StartDevices();
+                if (recibiendo == true)
+                {
+                    InvokeGUIThread(() => { tb_Display.Text = "In call with : " + ((IPhoneCall)sender).DialInfo.CallerDisplay; });
+                    extensionUltimaLlamada = ((IPhoneCall)sender).DialInfo.CallerDisplay; 
+                }
+                else
+                {
+                    InvokeGUIThread(() => { tb_Display.Text = "In call with : " + ((IPhoneCall)sender).DialInfo.Dialed; });
+                    extensionUltimaLlamada = ((IPhoneCall)sender).DialInfo.Dialed; 
+                }
                 InvokeGUIThread(() => { callTimer.Start(); }); 
             }
 
@@ -242,7 +256,9 @@ namespace sipCaller
             {
                 
                 _incomingCall = false;
+                recibiendo = true; 
                 _call.Answer();
+                
 
                 return;
             }
@@ -263,7 +279,9 @@ namespace sipCaller
 
                 _call = _softPhone.CreateCallObject(_phoneLine, userName);
                 WireUpCallEvents();
+                recibiendo = false; 
                 _call.Start();
+                
 
                 _otherParty = _databaseManager.GetOtherPartyInfos(userName);
                 ShowUserInfos(_otherParty);
@@ -281,7 +299,7 @@ namespace sipCaller
                 else
                 {
                     _call.HangUp();
-                    stopTimer(); 
+                    //stopTimer(); 
                 }
                 _incomingCall = false;
                 _call = null;
@@ -341,7 +359,30 @@ namespace sipCaller
 
         private void stopTimer(){
                 callTimer.Stop();
-                InvokeGUIThread(() => { labelCallTimer.Text = ""; });                
+                InvokeGUIThread(() => { labelCallTimer.Text = ""; });
+
+                string path =  Application.StartupPath + "\\log.txt";
+
+                if (!File.Exists(path))
+                {
+                    File.Create(path).Dispose();
+                    using (TextWriter tw = new StreamWriter(path))
+                    {
+                        DateTime dateValue = DateTime.Now;
+                        tw.WriteLine(extensionUltimaLlamada + "|" + dateValue.ToString("dd-MM-yyyy") + "|" + dateValue.ToString("HH:mm")); 
+                        tw.Close();
+                    }
+
+                }
+                else 
+                {
+                    using (StreamWriter tw = File.AppendText(path))
+                    {
+                        DateTime dateValue = DateTime.Now;
+                        tw.WriteLine(extensionUltimaLlamada + "|" + dateValue.ToString("dd-MM-yyyy") + "|" + dateValue.ToString("HH:mm")); 
+                        tw.Close(); 
+                    }
+                }
                 secondsCounter = 0; 
         }
 

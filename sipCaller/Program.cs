@@ -13,8 +13,9 @@ namespace sipCaller
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new formSipRegister());
-            Application.Run(new FormCallAssistant());
+            Application.Run(new formSipRegister());
+
+            
         }
     }
 }

@@ -37,3 +37,4 @@ C:\Users\Nataniel\Desktop\sipCalls\sipCaller\sipCaller\obj\Debug\sipCaller.formD
 C:\Users\Nataniel\Desktop\sipCalls\sipCaller\sipCaller\obj\Debug\sipCaller.formSipRegister.resources
 C:\Users\Nataniel\Desktop\sipCalls\sipCaller\sipCaller\obj\Debug\sipCaller.Properties.Resources.resources
 C:\Users\Nataniel\Desktop\sipCalls\sipCaller\sipCaller\obj\Debug\sipCaller.csproj.GenerateResource.Cache
+C:\Users\Nataniel\Desktop\sipCalls\sipCaller\sipCaller\obj\Debug\sipCaller.formMostrarLog.resources

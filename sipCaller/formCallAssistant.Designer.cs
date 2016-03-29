@@ -64,9 +64,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.callTimer = new System.Windows.Forms.Timer(this.components);
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.generarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mostrarLogToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tb_Display
@@ -430,6 +434,30 @@
             this.callTimer.Interval = 1000;
             this.callTimer.Tick += new System.EventHandler(this.callTimer_Tick);
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.generarToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(959, 24);
+            this.menuStrip1.TabIndex = 3;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // generarToolStripMenuItem
+            // 
+            this.generarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mostrarLogToolStripMenuItem});
+            this.generarToolStripMenuItem.Name = "generarToolStripMenuItem";
+            this.generarToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+            this.generarToolStripMenuItem.Text = "Mostrar";
+            // 
+            // mostrarLogToolStripMenuItem
+            // 
+            this.mostrarLogToolStripMenuItem.Name = "mostrarLogToolStripMenuItem";
+            this.mostrarLogToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.mostrarLogToolStripMenuItem.Text = "Mostrar log";
+            // 
             // FormCallAssistant
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -437,7 +465,9 @@
             this.ClientSize = new System.Drawing.Size(959, 453);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "FormCallAssistant";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -450,7 +480,10 @@
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -491,6 +524,9 @@
         private System.Windows.Forms.Button btn_Hold;
         private System.Windows.Forms.Timer callTimer;
         private System.Windows.Forms.Label labelCallTimer;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem generarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mostrarLogToolStripMenuItem;
     }
 }
 

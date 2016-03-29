@@ -75,6 +75,12 @@
     <Compile Include="formDatosUsuario.Designer.cs">
       <DependentUpon>formDatosUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="formMostrarLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formMostrarLog.Designer.cs">
+      <DependentUpon>formMostrarLog.cs</DependentUpon>
+    </Compile>
     <Compile Include="formSipRegister.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +100,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="formDatosUsuario.resx">
       <DependentUpon>formDatosUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formMostrarLog.resx">
+      <DependentUpon>formMostrarLog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formSipRegister.resx">
       <DependentUpon>formSipRegister.cs</DependentUpon>
