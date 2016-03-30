@@ -48,6 +48,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="OzekiSDK">
       <HintPath>..\..\..\..\Resources\.NET4\OzekiSDK.dll</HintPath>
     </Reference>
@@ -62,6 +63,8 @@
     <Reference Include="System.XML" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="classInventario.cs" />
+    <Compile Include="classUsuario.cs" />
     <Compile Include="DatabaseManager.cs" />
     <Compile Include="formCallAssistant.cs">
       <SubType>Form</SubType>
@@ -87,6 +90,7 @@
     <Compile Include="formSipRegister.Designer.cs">
       <DependentUpon>formSipRegister.cs</DependentUpon>
     </Compile>
+    <Compile Include="MySqlConnection.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserInfo.cs" />

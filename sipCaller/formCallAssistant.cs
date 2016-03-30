@@ -391,5 +391,11 @@ namespace sipCaller
             
         }
 
+        private void mostrarLogToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            formMostrarLog ventanaMostrar = new formMostrarLog();
+            ventanaMostrar.Show(); 
+        }
+
     }
 }

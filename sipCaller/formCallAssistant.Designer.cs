@@ -457,6 +457,7 @@
             this.mostrarLogToolStripMenuItem.Name = "mostrarLogToolStripMenuItem";
             this.mostrarLogToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.mostrarLogToolStripMenuItem.Text = "Mostrar log";
+            this.mostrarLogToolStripMenuItem.Click += new System.EventHandler(this.mostrarLogToolStripMenuItem_Click);
             // 
             // FormCallAssistant
             // 
