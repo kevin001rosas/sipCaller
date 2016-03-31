@@ -10,7 +10,7 @@ namespace sipCaller
 {
     public class classCategoria
     {
-        public int idCategoría = 0;
+        public int idCategoria = 0;
         public string descripcion = "";
         
 
@@ -35,7 +35,7 @@ namespace sipCaller
         }
         public bool existe()
         {
-            string sql = "SELECT * FROM sipDatabase.t_categorias where idCategoría=" + idCategoría + ";";
+            string sql = "SELECT * FROM sipDatabase.t_categorias where idCategoria=" + idCategoria + ";";
             mcd = new MySqlCommand(sql, mcon);
             DataTable tablaProductos = new DataTable();
             //OPEN CON,RETRIEVE,FILL DGVIEW
@@ -59,9 +59,9 @@ namespace sipCaller
                 return false;
             }
         }
-        public void getInventarioById()
+        public void getCategoriaById()
         {
-            string sql = "SELECT * FROM sipDatabase.t_categorias where idCategoría=" + idCategoría + ";";
+            string sql = "SELECT * FROM sipDatabase.t_categorias where idCategoria=" + idCategoria + ";";
             mcd = new MySqlCommand(sql, mcon);
             DataTable tablaUsuarios = new DataTable();
             //OPEN CON,RETRIEVE,FILL DGVIEW
@@ -74,7 +74,7 @@ namespace sipCaller
 
                 adapter.Fill(tablaUsuarios);
 
-                descripcion = tablaUsuarios.Rows[0]["fechaCompra"].ToString();         
+                descripcion = tablaUsuarios.Rows[0]["descripcion"].ToString();         
                 closeCon();
 
             }
@@ -94,7 +94,7 @@ namespace sipCaller
             "values('" + descripcion +  "');";
             
             Console.WriteLine(q);
-            MessageBox.Show(q);
+            //MessageBox.Show(q);
             try
             {
                 openCon();
@@ -121,7 +121,7 @@ namespace sipCaller
         public void update()
         {
             string q = "update sipDatabase.t_categorias set descripcion='" + descripcion
-                + "' WHERE idCategoría=" + idCategoría + ";";
+                + "' WHERE idCategoria=" + idCategoria + ";";
 
             //MessageBox.Show(q);
             try

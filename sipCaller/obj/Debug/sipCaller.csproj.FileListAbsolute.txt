@@ -38,3 +38,17 @@ C:\Users\Nataniel\Desktop\sipCalls\sipCaller\sipCaller\obj\Debug\sipCaller.formS
 C:\Users\Nataniel\Desktop\sipCalls\sipCaller\sipCaller\obj\Debug\sipCaller.Properties.Resources.resources
 C:\Users\Nataniel\Desktop\sipCalls\sipCaller\sipCaller\obj\Debug\sipCaller.csproj.GenerateResource.Cache
 C:\Users\Nataniel\Desktop\sipCalls\sipCaller\sipCaller\obj\Debug\sipCaller.formMostrarLog.resources
+C:\Users\Juan\Desktop\sipCaller\sipCaller\bin\Debug\sipCaller.exe.config
+C:\Users\Juan\Desktop\sipCaller\sipCaller\obj\Debug\sipCaller.exe
+C:\Users\Juan\Desktop\sipCaller\sipCaller\obj\Debug\sipCaller.pdb
+C:\Users\Juan\Desktop\sipCaller\sipCaller\obj\Debug\sipCaller.csprojResolveAssemblyReference.cache
+C:\Users\Juan\Desktop\sipCaller\sipCaller\obj\Debug\sipCaller.FormCallAssistant.resources
+C:\Users\Juan\Desktop\sipCaller\sipCaller\obj\Debug\sipCaller.formDatosUsuario.resources
+C:\Users\Juan\Desktop\sipCaller\sipCaller\obj\Debug\sipCaller.formMostrarLog.resources
+C:\Users\Juan\Desktop\sipCaller\sipCaller\obj\Debug\sipCaller.formSipRegister.resources
+C:\Users\Juan\Desktop\sipCaller\sipCaller\obj\Debug\sipCaller.Properties.Resources.resources
+C:\Users\Juan\Desktop\sipCaller\sipCaller\obj\Debug\sipCaller.csproj.GenerateResource.Cache
+C:\Users\Juan\Desktop\sipCaller\sipCaller\bin\Debug\UserInfoContainer.mdf
+C:\Users\Juan\Desktop\sipCaller\sipCaller\bin\Debug\UserInfoContainer_log.ldf
+C:\Users\Juan\Desktop\sipCaller\sipCaller\bin\Debug\sipCaller.exe
+C:\Users\Juan\Desktop\sipCaller\sipCaller\bin\Debug\sipCaller.pdb

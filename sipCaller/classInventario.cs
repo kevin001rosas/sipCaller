@@ -97,7 +97,7 @@ namespace sipCaller
             "values('" + equipo+ "','" + fechaCompra+ "','" + factura+ "');";
 
             Console.WriteLine(q);
-            MessageBox.Show(q);
+            //MessageBox.Show(q);
             try
             {
                 openCon();
@@ -124,7 +124,7 @@ namespace sipCaller
         public void update()
         {
             string q = "update sipDatabase.t_inventarios set equipo='" + equipo
-                + "', correo='" + fechaCompra
+                + "', fechaCompra='" + fechaCompra
                 + "', factura='" + factura
                 + "' WHERE idInventario=" + idInventario + ";";
 

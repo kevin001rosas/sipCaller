@@ -11,14 +11,14 @@ namespace sipCaller
     public class classReporte
     {
         public int idReporte = 0;
-        public string id_categoría = "";
+        public string id_categoria = "";
         public string extension = "";
         public string num_inventario = "";
         public string problema = "";
         public string fecha_repo = "";
         public string fecha_cierra = "";
-        public string solución = "";
-        public string calificación = "";
+        public string solucion = "";
+        public string calificacion = "";
         public bool abierto = true; 
         public MySqlConnection mcon = new MySqlConnection("datasource=localhost;port=3306;username=root;password=");
         public MySqlCommand mcd;
@@ -66,7 +66,7 @@ namespace sipCaller
                 return false;
             }
         }
-        public void getInventarioById()
+        public void getReporteById()
         {
             string sql = "SELECT * FROM sipDatabase.t_reportes where idReporte=" + idReporte + ";";
             mcd = new MySqlCommand(sql, mcon);
@@ -81,14 +81,14 @@ namespace sipCaller
 
                 adapter.Fill(tablaUsuarios);
 
-                id_categoría = tablaUsuarios.Rows[0]["id_categoría"].ToString();
+                id_categoria = tablaUsuarios.Rows[0]["id_categoria"].ToString();
                 extension = tablaUsuarios.Rows[0]["extension"].ToString();
                 num_inventario = tablaUsuarios.Rows[0]["num_inventario"].ToString();
                 problema = tablaUsuarios.Rows[0]["problema"].ToString();
                 fecha_repo = tablaUsuarios.Rows[0]["fecha_repo"].ToString();
                 fecha_cierra = tablaUsuarios.Rows[0]["fecha_cierra"].ToString();
-                solución = tablaUsuarios.Rows[0]["solución"].ToString();
-                calificación = tablaUsuarios.Rows[0]["calificación"].ToString();
+                solucion = tablaUsuarios.Rows[0]["solucion"].ToString();
+                calificacion = tablaUsuarios.Rows[0]["calificacion"].ToString();
                 abierto = Convert.ToBoolean(tablaUsuarios.Rows[0]["abierto"].ToString());
                 closeCon();
 
@@ -106,26 +106,26 @@ namespace sipCaller
         public void insert()
         {
             string q = "insert into sipDatabase.t_reportes "+
-                "(id_categoría, "+
+                "(id_categoria, "+
                 "extension, "+
                 "num_inventario, "+
                 "problema, "+
                 "fecha_repo, "+
                 "fecha_cierra, "+
-                "solución, "+
-                "calificación, "+
+                "solucion, "+
+                "calificacion, "+
                 "abierto) " +
-            "values('" + id_categoría +
+            "values('" + id_categoria +
             "','" + extension +
             "','" + num_inventario +
             "','" + problema +
             "','" + fecha_repo +
             "','" + fecha_cierra +
-            "','" + solución +
-            "','" + calificación +
+            "','" + solucion +
+            "','" + calificacion +
             "'," + abierto + ");";
             Console.WriteLine(q);
-            MessageBox.Show(q);
+            //MessageBox.Show(q);
             try
             {
                 openCon();
@@ -151,16 +151,16 @@ namespace sipCaller
 
         public void update()
         {
-            string q = "update sipDatabase.t_reportes set id_categoría='" + id_categoría
+            string q = "update sipDatabase.t_reportes set id_categoria='" + id_categoria
                 + "', extension='" + extension
                 + "', num_inventario='" + num_inventario
                 + "', problema='" + problema
                 + "', fecha_repo='" + fecha_repo
                 + "', fecha_cierra='" + fecha_cierra
-                + "', solución='" + solución
-                + "', calificación='" + calificación
-                + "', abierto='" + abierto
-                + "' WHERE idReporte=" + idReporte + ";";
+                + "', solucion='" + solucion
+                + "', calificacion='" + calificacion
+                + "', abierto=" + abierto
+                + " WHERE idReporte=" + idReporte + ";";
 
 
 

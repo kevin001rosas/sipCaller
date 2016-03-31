@@ -10,7 +10,7 @@ namespace sipCaller
 {
     public class classUsuario
     {
-        public int idUsuario = "";
+        public int idUsuario = 0;
         public string area = "";
         public string correo = "";
         public string extension = ""; 	
@@ -73,7 +73,7 @@ namespace sipCaller
 
 
                 adapter.Fill(tablaUsuarios);
-                idUsuario = tablaUsuarios.Rows[0]["idUsuario"].ToString();
+                idUsuario = Convert.ToInt32(tablaUsuarios.Rows[0]["idUsuario"].ToString());
                 area = tablaUsuarios.Rows[0]["area"].ToString();
                 correo = tablaUsuarios.Rows[0]["correo"].ToString();
                 extension = tablaUsuarios.Rows[0]["extension"].ToString();
@@ -96,7 +96,7 @@ namespace sipCaller
             "values('" + area + "','" + correo + "','" + extension + "');"; 
 
             Console.WriteLine(q);
-            MessageBox.Show(q);
+            //MessageBox.Show(q);
             try
             {
                 openCon();
@@ -124,7 +124,7 @@ namespace sipCaller
         {
             string q = "update sipDatabase.t_usuarios set area='" + area                 
                 + "', correo='" + correo                  
-                + "' WHERE extension=" + extension + ";";
+                + "' WHERE extension='" + extension + "';";
 
             //MessageBox.Show(q);
             try
