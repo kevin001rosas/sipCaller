@@ -10,10 +10,10 @@ namespace sipCaller
 {
     public class classUsuario
     {
-        string idUsuario = "";
-        string area = "";
-        string correo = "";
-        string extension = ""; 	
+        public int idUsuario = "";
+        public string area = "";
+        public string correo = "";
+        public string extension = ""; 	
         public MySqlConnection mcon = new MySqlConnection("datasource=localhost;port=3306;username=root;password=");
         public MySqlCommand mcd;
         public MySqlDataAdapter adapter;
@@ -90,10 +90,10 @@ namespace sipCaller
 
         }
 
-        public void insertUser()
+        public void insert()
         {
             string q = "insert into sipDatabase.t_usuarios (area, correo, extension) " +
-            "values('" + area + "','" + correo + "','" + extension + "'');"; 
+            "values('" + area + "','" + correo + "','" + extension + "');"; 
 
             Console.WriteLine(q);
             MessageBox.Show(q);
@@ -120,10 +120,10 @@ namespace sipCaller
             }
         }
 
-        public void updateClient()
+        public void update()
         {
             string q = "update sipDatabase.t_usuarios set area='" + area                 
-                + "', correo='"                   
+                + "', correo='" + correo                  
                 + "' WHERE extension=" + extension + ";";
 
             //MessageBox.Show(q);

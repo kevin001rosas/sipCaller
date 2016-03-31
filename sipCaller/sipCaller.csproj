@@ -63,7 +63,9 @@
     <Reference Include="System.XML" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="classCategorias.cs" />
     <Compile Include="classInventario.cs" />
+    <Compile Include="classReporte.cs" />
     <Compile Include="classUsuario.cs" />
     <Compile Include="DatabaseManager.cs" />
     <Compile Include="formCallAssistant.cs">

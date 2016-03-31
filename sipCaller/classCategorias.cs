@@ -8,12 +8,12 @@ using System.Windows.Forms;
 
 namespace sipCaller
 {
-    public class classInventario
+    public class classCategoria
     {
-        public int idInventario = 0;
-        public string equipo = "";
-        public string fechaCompra = "";
-        public string factura = "";
+        public int idCategoría = 0;
+        public string descripcion = "";
+        
+
         public MySqlConnection mcon = new MySqlConnection("datasource=localhost;port=3306;username=root;password=");
         public MySqlCommand mcd;
         public MySqlDataAdapter adapter;
@@ -35,7 +35,7 @@ namespace sipCaller
         }
         public bool existe()
         {
-            string sql = "SELECT * FROM sipDatabase.t_inventarios where idInventario=" + idInventario + ";";
+            string sql = "SELECT * FROM sipDatabase.t_categorias where idCategoría=" + idCategoría + ";";
             mcd = new MySqlCommand(sql, mcon);
             DataTable tablaProductos = new DataTable();
             //OPEN CON,RETRIEVE,FILL DGVIEW
@@ -61,7 +61,7 @@ namespace sipCaller
         }
         public void getInventarioById()
         {
-            string sql = "SELECT * FROM sipDatabase.t_inventarios where idInventario=" + idInventario + ";";
+            string sql = "SELECT * FROM sipDatabase.t_categorias where idCategoría=" + idCategoría + ";";
             mcd = new MySqlCommand(sql, mcon);
             DataTable tablaUsuarios = new DataTable();
             //OPEN CON,RETRIEVE,FILL DGVIEW
@@ -74,10 +74,7 @@ namespace sipCaller
 
                 adapter.Fill(tablaUsuarios);
 
-                equipo = tablaUsuarios.Rows[0]["equipo"].ToString();
-                fechaCompra = tablaUsuarios.Rows[0]["fechaCompra"].ToString();
-                factura = tablaUsuarios.Rows[0]["factura"].ToString();
-                
+                descripcion = tablaUsuarios.Rows[0]["fechaCompra"].ToString();         
                 closeCon();
 
             }
@@ -93,9 +90,9 @@ namespace sipCaller
 
         public void insert()
         {
-            string q = "insert into sipDatabase.t_inventarios (equipo, fechaCompra, factura) " +
-            "values('" + equipo+ "','" + fechaCompra+ "','" + factura+ "');";
-
+            string q = "insert into sipDatabase.t_categorias (descripcion) " +
+            "values('" + descripcion +  "');";
+            
             Console.WriteLine(q);
             MessageBox.Show(q);
             try
@@ -123,10 +120,8 @@ namespace sipCaller
 
         public void update()
         {
-            string q = "update sipDatabase.t_inventarios set equipo='" + equipo
-                + "', correo='" + fechaCompra
-                + "', factura='" + factura
-                + "' WHERE idInventario=" + idInventario + ";";
+            string q = "update sipDatabase.t_categorias set descripcion='" + descripcion
+                + "' WHERE idCategoría=" + idCategoría + ";";
 
             //MessageBox.Show(q);
             try
